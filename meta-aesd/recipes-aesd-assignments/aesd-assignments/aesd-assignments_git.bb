@@ -26,6 +26,7 @@ TARGET_LDFLAGS += "-pthread -lrt"
 inherit update-rc.d
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "aesdsocket-start-stop.sh"
+RDEPENDS:${PN} += "libgcc"
 
 do_configure () {
 	:
